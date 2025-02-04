@@ -1,0 +1,94 @@
+{
+	"version": 1,
+	"named_parameters": true,
+	"parameters": [
+		{
+			"id": "s2TKDfHaLedGhltW",
+			"name": "Processor Full Name",
+			"param_name": "processor_full_name",
+			"type": "text",
+			"value_type": "string",
+			"required": true
+		},
+		{
+			"id": "tlRIaEKCbaiiROxC",
+			"name": "fix_data_asset_name",
+			"param_name": "fix_data_asset_name",
+			"type": "text",
+			"value_type": "string",
+			"required": true
+		},
+		{
+			"id": "QaGRmeB3EW9nFjca",
+			"name": "mov_data_asset_name",
+			"param_name": "mov_data_asset_name",
+			"type": "text",
+			"value_type": "string",
+			"required": true
+		},
+		{
+			"id": "KwhX2dw8SYvgqrd8",
+			"name": "fix_multiscale_root_path",
+			"param_name": "fix_multiscale_root_path",
+			"type": "text",
+			"value_type": "string",
+			"required": true,
+			"pattern": "^s3:\\/\\/[a-z0-9\\-\\.]+\\/([a-zA-Z0-9\\-._\\/]+\\/)*[a-zA-Z0-9\\-._]+\\.zarr$"
+		},
+		{
+			"id": "YGpvPFGG5phcKW88",
+			"name": "mov_multiscale_root_path",
+			"param_name": "mov_multiscale_root_path",
+			"type": "text",
+			"value_type": "string",
+			"required": true,
+			"pattern": "^s3:\\/\\/[a-z0-9\\-\\.]+\\/([a-zA-Z0-9\\-._\\/]+\\/)*[a-zA-Z0-9\\-._]+\\.zarr$"
+		},
+		{
+			"id": "DkjEz5e1NUHRtTSp",
+			"name": "mov_segmentation_path",
+			"param_name": "mov_segmentation_path",
+			"help_text": "Relative to capsule with data-asset attached.",
+			"type": "text",
+			"value_type": "string",
+			"required": true
+		},
+		{
+			"id": "Zi4d80NRJuatPEPr",
+			"name": "mov_segmentation_data_asset_id",
+			"param_name": "mov_segmentation_data_asset_id",
+			"type": "text",
+			"value_type": "string",
+			"required": true
+		},
+		{
+			"id": "kTyfoBVqv3P7T4am",
+			"name": "global_alignment_multiscale_level",
+			"param_name": "global_alignment_multiscale_level",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "4",
+			"required": true,
+			"maximum": 5
+		},
+		{
+			"id": "fiGu1qqrOp9D23Hk",
+			"name": "local_alignment_multiscale_level",
+			"param_name": "local_alignment_multiscale_level",
+			"type": "text",
+			"value_type": "integer",
+			"default_value": "2",
+			"required": true,
+			"maximum": 5
+		},
+		{
+			"id": "YvyWjoRBkMsrcpv3",
+			"name": "pipeline_id",
+			"param_name": "pipeline_id",
+			"type": "text",
+			"value_type": "string",
+			"default_value": "37affaa2-fb51-4fb6-8012-415e644c4023",
+			"required": true
+		}
+	]
+}
