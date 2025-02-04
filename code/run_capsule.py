@@ -135,7 +135,8 @@ def parse_args():
                         help='Global alignment multiscale level.')
     parser.add_argument('--local_alignment_multiscale_level', type=int, required=True,
                         help='Local alignment multiscale level.')
-
+    parser.add_argument('--pipeline_id',
+    type=str, required=True, help='CO id for pipeline to call')
     return parser.parse_args()
 
 
