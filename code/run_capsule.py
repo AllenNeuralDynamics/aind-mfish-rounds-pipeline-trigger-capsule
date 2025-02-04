@@ -90,6 +90,10 @@ def start_blocking_pipeline_run(params):
 
     
     mask_mount = "local_segmentation_mount"
+
+    params['mov_segmentation_path'] = '/data/'+mask_mount+'/'+params['mov_segmentation_path']
+
+    print("Final mov_segmentation_path", params['mov_segmentation_path'])
     pipeline_processes = create_pipeline_computation_processes(**params)
     
     run_pipeline_request = RunCapsuleRequest(
@@ -107,6 +111,8 @@ def start_blocking_pipeline_run(params):
     
     while(not is_computation_complete(codeocean_client, computation_id)):
       time.sleep(30) # wait for poll
+
+    print("Pipeline complete!")
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Argument parser for alignment processing.")
