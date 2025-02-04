@@ -97,7 +97,7 @@ def start_blocking_pipeline_run(params):
     pipeline_processes = create_pipeline_computation_processes(**params)
     
     run_pipeline_request = RunCapsuleRequest(
-        pipeline_id=params['pipeline_id']
+        pipeline_id=params['pipeline_id'],
         processes=pipeline_processes,
         data_assets = [ComputationDataAsset(id=segmentation_data_id, mount=mask_mount)]
     )
