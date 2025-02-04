@@ -1,9 +1,10 @@
 from aind_codeocean_api.codeocean import CodeOceanClient
 from aind_codeocean_api.models.computations_requests import RunCapsuleRequest, ComputationNamedParameter, ComputationProcess, ComputationDataAsset
 import os
+import json
 
 def get_codeocean_client():
-    return CodeOceanClient(domain='https://codeocean.allenneuraldynamics.org', token=os.environ['CUSTOM_KEY_2'])
+    return CodeOceanClient(domain='https://codeocean.allenneuraldynamics.org', token=os.environ['CUSTOM_KEY'])
 
 
 def get_response_content_as_dict(response):

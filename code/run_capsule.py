@@ -24,6 +24,7 @@ def create_pipeline_computation_processes(processor_full_name,
                                          global_alignment_multiscale_level=4,
                                          local_alignment_multiscale_level=2,
                                          save_transform_steps=False,
+                                         **kwargs
                                          ):
 
     
