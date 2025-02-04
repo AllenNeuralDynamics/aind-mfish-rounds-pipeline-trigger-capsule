@@ -1,6 +1,6 @@
 from aind_codeocean_api.codeocean import CodeOceanClient
 from aind_codeocean_api.models.computations_requests import RunCapsuleRequest, ComputationNamedParameter, ComputationProcess, ComputationDataAsset
-
+import os
 
 def get_codeocean_client():
     return CodeOceanClient(domain='https://codeocean.allenneuraldynamics.org', token=os.environ['CUSTOM_KEY_2'])
